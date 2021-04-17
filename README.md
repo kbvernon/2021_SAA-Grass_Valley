@@ -1,7 +1,7 @@
 
 # 2021_SAA-Grass_Valley
 
-Repository for my presentation at the Society for American Archaeology 86th Annual Meeting Online.
+Repository for my presentation at the Society for American Archaeology 86th Annual Meeting Online. Slides made using [xaringan](https://github.com/yihui/xaringan) in R.
 
 __Session:__ "Far West Paleoindian Archaeology: Papers from the Next Generation"
 
