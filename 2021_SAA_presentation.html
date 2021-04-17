@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Explaining Paleoindian Settlement in the Intermountain West</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2021-04-17" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom_style.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+background-color: black
+
+&lt;!-- 
+The code to generate figures can be found at 
+Rmd/libs/images/generate_presentation_figures.R
+--&gt;
+
+
+&lt;style type="text/css"&gt;
+
+.pull-lleft {
+  float: left;
+  width: 15%;
+}
+
+.pull-lright {
+  float: right;
+  width: 84%;
+}
+
+.pull-lright ~ * {
+  clear: both;
+}
+
+
+&lt;/style&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pull-left[
+
+&lt;img src="libs/images/unknown_grass_valley.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+.white[
+
+Principals  
+  - David Zeanah, Brian F. Codding, &lt;br&gt; D. Craig Young, Robert Elston  
+  
+Field Directors  
+  - Paul Algaier, Eric Martin, Kate Magargal, &lt;br&gt; Ryan Bradshaw, Martijn Kuypers  
+
+Person responsible for current analysis
+  - Kenneth B. Vernon  
+
+&lt;br&gt;
+
+2021-04-17
+
+]
+
+]
+
+
+
+---
+
+background-image: url("archaeological_context.png")
+background-size: contain
+
+## Archaeological&lt;br&gt;Context
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+&lt;br&gt;
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?
+
+]
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+&lt;br&gt;
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+&lt;br&gt;
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.   
+
+]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+&lt;br&gt;
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+&lt;br&gt;
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+&lt;br&gt;
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+&lt;br&gt;
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+&lt;br&gt;
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+&lt;br&gt;
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+&lt;br&gt;
+
+__Prediction__:  Prearchaic sites are expected to occur at greater densities in proximity to the Pleistocene lake.  
+
+]
+
+
+
+---
+
+background-image: url("prearchaic_density.png")
+background-size: contain
+
+## Prearchaic Site Density
+
+
+
+---
+
+# Spatial Thinning
+
+&lt;img src="libs/images/thinning_one.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Spatial Thinning
+
+&lt;img src="libs/images/thinning_two.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# Spatial Thinning
+
+&lt;img src="libs/images/thinning_three.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+# Regression adjustment
+
+The __actual density__ of archaeological sites, `\(\lambda(s)\)`, is the outcome of scientific interest. Simple log-linear model:
+
+$$ log\; \lambda(s) = \alpha + \beta x(s) $$
+&lt;br&gt;
+
+--
+
+However, this is subject to __sampling bias__, `\(b(s)\)`. Also, a simple log-linear model:
+
+$$ log\; b(s) = \gamma + \delta z(s) $$
+&lt;br&gt;
+
+--
+
+Simple linear response means we can combine them into a joint model of the __observed density__:
+
+$$ log\; \lambda(s)b(s) = (\alpha + \gamma) + \beta x(s) + \delta z(s) $$
+
+
+
+---
+
+## Density Model
+
+$$ \lambda(s) = \text{Time Period} * (\text{Lake} + \text{Springs} + \text{Streams}) $$
+
+&lt;img src="libs/images/density-explanatory.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+
+## Observation Model
+
+$$ b(s) = \text{Distance to Road} + \text{Deposition Age} $$
+.pull-left[
+
+&lt;br&gt;
+
+&lt;img src="libs/images/density-observation_road.png" width="75%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+]
+
+.pull-right[
+
+&lt;img src="libs/images/density-observation_landform.png" width="75%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+]
+
+
+
+---
+
+## Results
+
+&lt;img src="libs/images/margins-explanatory.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+.center[ Lake proximity currently __not significant__ for Prearchaic. ]
+
+
+---
+
+## Results
+
+&lt;img src="libs/images/margins-observation.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+.center[ Deposition age currently __not significant__. ]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+&lt;br&gt;
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+&lt;br&gt;
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+&lt;br&gt;
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+&lt;br&gt;
+
+__Prediction__:  Prearchaic sites are expected to occur at greater densities in proximity to the Pleistocene lake.  
+
+]
+
+
+
+---
+
+## Lingering Issues 
+
+__Environmental homogeneity__.   
+
+--
+
+- Hard to tease out environmental drivers of settlement.  
+
+&lt;br&gt;
+
+--
+
+__Sampling bias__, again.   
+
+--
+
+- This analysis accounts for only _surface_ sampling bias, and that only partially.
+- Heaps of sampling bias likely still occur in intensely surveyed areas.
+
+&lt;br&gt;
+
+--
+
+__Equifinality__.
+
+--
+
+-  The same observed density, `\(\lambda(s)b(s)\)`, could result from 
+  - different combinations of `\(\alpha\)` and `\(\gamma\)`, and
+  - different combinations of `\(x(s)\)` and `\(z(s)\)` when those are highly correlated.
+
+
+
+---
+
+background-image: url("survey_intensity.png")
+background-size: contain
+
+## Conclusion
+
+Need to...
+
+--
+
+* expand __geographic range__.
+
+--
+
+* invest in more __targeted inventory__, and
+
+--
+
+* incorporate __research history__ as prior.
+
+
+---
+
+background-image: url("green_grass_valley.jpg")
+background-size: contain
+
+
+## Acknowledgments
+
+Special thanks to
+
+* The University of Utah Archaeological Center Lab Group
+* Kristen Hawkes and James F. O'Connell
+* Kurt Wilson and Kasey Cole
+* Peter Yaworsky, Weston McCool, and Kate Magargal
+* Jon Wilker and the Gund Ranch Crew
+
+
+.pull-lleft[
+
+&lt;div style = "margin-right: 0;"&gt;
+&lt;img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;/div&gt;
+
+]
+
+.pull-lright[
+
+This material is based upon work supported by the National Science Foundation &lt;br&gt; under Grant No. (BCS-1632521, -1632522, -1632526). 
+
+
+]
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "magula",
+"highlightLines": true,
+"countIncrementalSlides": true,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

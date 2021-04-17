@@ -1,0 +1,433 @@
+---
+title: "Explaining Paleoindian Settlement<br>in the Intermountain West"
+subtitle: "A Regression Adjustment Approach"  
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: [xaringan-themer.css, custom_style.css]
+    seal: FALSE
+    nature:
+      highlightStyle: magula
+      highlightLines: TRUE
+      countIncrementalSlides: TRUE
+      ratio: '16:9'
+---
+
+background-color: black
+
+<!-- 
+Images are generated elsewhere and simply loaded here.
+-->
+
+
+```{css, echo = FALSE}
+
+.pull-lleft {
+  float: left;
+  width: 15%;
+}
+
+.pull-lright {
+  float: right;
+  width: 84%;
+}
+
+.pull-lright ~ * {
+  clear: both;
+}
+
+
+```
+
+```{r, echo = FALSE, child = here::here("2021_SAA_presentation_before_chunk.Rmd")}
+```
+
+.pull-left[
+
+```{r, echo = FALSE, out.width = "100%"}
+
+figure("unknown_grass_valley.png")
+
+```
+
+]
+
+.pull-right[
+
+<br><br><br><br>
+
+.white[
+
+Principals  
+  - David Zeanah, Brian F. Codding, <br> D. Craig Young, Robert Elston  
+  
+Field Directors  
+  - Paul Algaier, Eric Martin, Kate Magargal, <br> Ryan Bradshaw, Martijn Kuypers  
+
+Person responsible for current analysis
+  - Kenneth B. Vernon  
+
+<br>
+
+`r Sys.Date()`
+
+]
+
+]
+
+
+
+---
+
+background-image: url("archaeological_context.png")
+background-size: contain
+
+## Archaeological<br>Context
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+<br>
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?
+
+]
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+<br>
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+<br>
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.   
+
+]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+<br>
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+<br>
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+<br>
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+<br>
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+<br>
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+<br>
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+<br>
+
+__Prediction__:  Prearchaic sites are expected to occur at greater densities in proximity to the Pleistocene lake.  
+
+]
+
+
+
+---
+
+background-image: url("prearchaic_density.png")
+background-size: contain
+
+## Prearchaic Site Density
+
+
+
+---
+
+# Spatial Thinning
+
+```{r, echo = FALSE, out.width = "100%"}
+
+figure("thinning_one.png")
+
+```
+
+
+---
+
+# Spatial Thinning
+
+```{r, echo = FALSE, out.width = "100%"}
+
+figure("thinning_two.png")
+
+```
+
+
+---
+
+# Spatial Thinning
+
+```{r, echo = FALSE, out.width = "100%"}
+
+figure("thinning_three.png")
+
+```
+
+
+
+---
+
+# Regression adjustment
+
+The __actual density__ of archaeological sites, $\lambda(s)$, is the outcome of scientific interest. Simple log-linear model:
+
+$$ log\; \lambda(s) = \alpha + \beta x(s) $$
+<br>
+
+--
+
+However, this is subject to __sampling bias__, $b(s)$. Also, a simple log-linear model:
+
+$$ log\; b(s) = \gamma + \delta z(s) $$
+<br>
+
+--
+
+Simple linear response means we can combine them into a joint model of the __observed density__:
+
+$$ log\; \lambda(s)b(s) = (\alpha + \gamma) + \beta x(s) + \delta z(s) $$
+
+
+
+---
+
+## Density Model
+
+$$ \lambda(s) = \text{Time Period} * (\text{Lake} + \text{Springs} + \text{Streams}) $$
+
+```{r, echo = FALSE, out.width = "80%"}
+
+figure("density-explanatory.png")
+
+```
+
+
+
+---
+
+## Observation Model
+
+$$ b(s) = \text{Distance to Road} + \text{Deposition Age} $$
+.pull-left[
+
+<br>
+
+```{r, echo = FALSE, fig.align = "right", out.width = "75%"}
+
+figure("density-observation_road.png")
+
+```
+
+]
+
+.pull-right[
+
+```{r, echo = FALSE, fig.align = "left", out.width = "75%"}
+
+figure("density-observation_landform.png")
+
+```
+
+]
+
+
+
+---
+
+## Results
+
+```{r, echo = FALSE, out.width = "85%"}
+
+figure("margins-explanatory.png")
+
+```
+
+.center[ Lake proximity currently __not significant__ for Prearchaic. ]
+
+
+---
+
+## Results
+
+```{r, echo = FALSE, out.width = "50%"}
+
+figure("margins-observation.png")
+
+```
+
+.center[ Deposition age currently __not significant__. ]
+
+
+
+---
+
+background-image: url("lake_topo.png")
+background-size: contain
+
+.pull-left[
+
+<br>
+
+__Question__:  What explains Prearchaic settlement patterns in Grass Valley, Nevada?  
+
+<br>
+
+__Hypothesis__:  Individuals should occupy the most suitable habitats first, meaning those in which they can maximize their inclusive fitness.  
+
+<br>
+
+__Observation__:  The rich, marshy environment surrounding the Pleistocene lake likely included the most profitable patches in the valley. Thus,  
+
+<br>
+
+__Prediction__:  Prearchaic sites are expected to occur at greater densities in proximity to the Pleistocene lake.  
+
+]
+
+
+
+---
+
+## Lingering Issues 
+
+__Environmental homogeneity__.   
+
+--
+
+- Hard to tease out environmental drivers of settlement.  
+
+<br>
+
+--
+
+__Sampling bias__, again.   
+
+--
+
+- This analysis accounts for only _surface_ sampling bias, and that only partially.
+- Heaps of sampling bias likely still occur in intensely surveyed areas.
+
+<br>
+
+--
+
+__Equifinality__.
+
+--
+
+-  The same observed density, $\lambda(s)b(s)$, could result from 
+  - different combinations of $\alpha$ and $\gamma$, and
+  - different combinations of $x(s)$ and $z(s)$ when those are highly correlated.
+
+
+
+---
+
+background-image: url("survey_intensity.png")
+background-size: contain
+
+## Conclusion
+
+Need to...
+
+--
+
+* expand __geographic range__.
+
+--
+
+* invest in more __targeted inventory__, and
+
+--
+
+* incorporate __research history__ as prior.
+
+
+---
+
+background-image: url("green_grass_valley.jpg")
+background-size: contain
+
+
+## Acknowledgments
+
+Special thanks to
+
+* The University of Utah Archaeological Center Lab Group
+* Kristen Hawkes and James F. O'Connell
+* Kurt Wilson and Kasey Cole
+* Peter Yaworsky, Weston McCool, and Kate Magargal
+* Jon Wilker and the Gund Ranch Crew
+
+
+.pull-lleft[
+
+<div style = "margin-right: 0;">
+```{r, echo = FALSE, out.width = "70%"}
+
+knitr::include_graphics("https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png")
+
+```
+</div>
+
+]
+
+.pull-lright[
+
+This material is based upon work supported by the National Science Foundation <br> under Grant No. (BCS-1632521, -1632522, -1632526). 
+
+
+]
+
+
+
+
+
