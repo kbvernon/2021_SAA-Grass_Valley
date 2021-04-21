@@ -17,7 +17,7 @@ output:
 background-color: black
 
 <!-- 
-Images are generated elsewhere and simply loaded here.
+Images are generated elsewhere and simply loaded here0.
 -->
 
 
