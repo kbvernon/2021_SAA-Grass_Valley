@@ -1,5 +1,5 @@
 
-# 2021_SAA-Grass_Valley
+# SAA 2021 - Grass Valley
 
 Repository for my presentation at the Society for American Archaeology 86th Annual Meeting Online. Slides made using [xaringan](https://github.com/yihui/xaringan) in R.
 
